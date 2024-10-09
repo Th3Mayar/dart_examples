@@ -10,21 +10,21 @@ void main() {
   tryCatch(); 
 }
 
-// 1. Interpolación de Strings
+// 1. String Interpolation
 void interpolation() {
   String name = 'Jose';
   print('Hola, $name!'); // Hola, Jose!
   print('5 + 3 = ${5 + 3}'); // 5 + 3 = 8
 }
 
-// 2. Variables nulas y operadores
+// 2. Null variables and operators
 void variables() {
-  int? a = null; // Variable nula
-  a ??= 5; // Si 'a' es nula, asigna 5
+  int? a = null; // Variable null
+  a ??= 5; // If 'a' is null, assign 5
   print(a); // 5
 }
 
-// 3. Colecciones (List, Set, Map)
+// 3. Collections (List, Set, Map)
 void collections() {
   final list = ['a', 'b', 'c'];
   final set = {'a', 'b', 'c'};
@@ -38,10 +38,10 @@ void collections() {
   print(extended);
 }
 
-// 4. Funciones flecha
+// 4. Arrow functions
 void arrowFunctions() {
   int add(int a, int b) => a + b;
-  print('Suma: ${add(5, 3)}'); // Suma: 8
+  print('Suma: ${add(5, 3)}'); // Sum: 8
 }
 
 // 5. Cascades
@@ -63,22 +63,22 @@ void cascade() {
     ..method2();
 }
 
-// 6. Funciones con parámetros opcionales y nombrados
+// 6. Functions with optional and named parameters
 void parametersOptionals() {
   int sum(int a, [int? b]) {
     return a + (b ?? 0);
   }
 
-  print('Suma con opcional: ${sum(5, 2)}'); // Suma con opcional: 7
-  print('Suma sin opcional: ${sum(5)}');    // Suma sin opcional: 5
+  print('Suma con opcional: ${sum(5, 2)}'); // Sum with optional: 7
+  print('Suma sin opcional: ${sum(5)}');    // Sum optional: 5
 }
 
-// 7. Función con parámetros nombrados
+// 7. Function with named parameters
 void printInfo({required String name, int age = 18}) {
   print('Name: $name, Age: $age');
 }
 
-// 8. Excepciones (try, catch, finally)
+// 8. Exceptions (try, catch, finally)
 void tryCatch() {
   try {
     // Simulamos una excepción
@@ -90,23 +90,23 @@ void tryCatch() {
   }
 }
 
-// 9. Constructores con nombre y factory
+// 9. Named constructors and factory
 class Car {
   String model;
   Car(this.model);
   Car.hybrid() : model = 'Hybrid';
 }
 
-// 10. Colecciones avanzadas: if, for en listas
+// 10. Advanced collections: if, for in lists
 void advancedCollections() {
-  bool promoActive = true; // Simulamos que la promo está activa
+  bool promoActive = true; We simulate that the promo is active
   var items = ['Home', if (promoActive) 'Sale'];
   print(items); // ['Home', 'Sale']
 }
 
-// 11. Asincronía: Futures y Streams
+// 11. Asynchrony: Futures and Streams
 Future<void> fetchData() async {
-  await Future.delayed(Duration(seconds: 1));  // Simulamos una carga de datos
+  await Future.delayed(Duration(seconds: 1));  // We simulate a data load
   print('Data fetched');
 }
 
